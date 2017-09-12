@@ -18,7 +18,7 @@
       <v-subheader>LEGACY SYSTEMS</v-subheader>
       <v-list-tile href='#'>
         <v-list-tile-action>
-          <v-icon>filter_none</v-icon>
+          <v-icon class="amber--text">fa-fire</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
           <v-list-tile-title>Phoenix</v-list-tile-title>
@@ -26,7 +26,7 @@
       </v-list-tile>
       <v-list-tile href="/#">
         <v-list-tile-action>
-          <v-icon>filter_none</v-icon>
+          <v-icon class="amber--text">fa-building</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
           <v-list-tile-title>Providers</v-list-tile-title>
@@ -39,7 +39,7 @@
       <v-subheader>TOOLBELT</v-subheader>
       <v-list-tile href="#">
         <v-list-tile-action>
-          <v-icon>filter_none</v-icon>
+          <v-icon class="amber--text">fa-wechat</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
           <v-list-tile-title>Communication Center</v-list-tile-title>
@@ -47,7 +47,7 @@
       </v-list-tile>
       <v-list-tile href="#">
         <v-list-tile-action>
-          <v-icon>filter_none</v-icon>
+          <v-icon class="amber--text">fa-bug</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
           <v-list-tile-title>Issue Tracker</v-list-tile-title>
@@ -60,7 +60,7 @@
       <v-subheader>CONSUMER APPS</v-subheader>
       <v-list-tile href="/">
         <v-list-tile-action>
-          <v-icon>filter_none</v-icon>
+          <v-icon class="amber--text">fa-hand-o-right</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
           <v-list-tile-title>E-Referral</v-list-tile-title>
@@ -68,7 +68,7 @@
       </v-list-tile>
       <v-list-tile href="/">
         <v-list-tile-action>
-          <v-icon>filter_none</v-icon>
+          <v-icon class="amber--text">fa-list-ol</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
           <v-list-tile-title>Waiting Lists</v-list-tile-title>
@@ -76,7 +76,7 @@
       </v-list-tile>
       <v-list-tile href="/">
         <v-list-tile-action>
-          <v-icon>filter_none</v-icon>
+          <v-icon class="amber--text">fa-vcard-o</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
           <v-list-tile-title>My Requests</v-list-tile-title>
