@@ -1,22 +1,38 @@
 <!-- NEW ISSUE MODAL -->
 <template>
   <div>
-    <v-dialog v-model="dialog" fullscreen transition="dialog-bottom-transition" :overlay=false>
+    <v-dialog v-model="dialog" fullscreen transition="dialog-bottom-transition" :overlay=false >
 
-     <v-btn
+      <v-btn :class="[activeFab.class]"
+      dark
+      fab
+      fixed
+      bottom
+      right
+      slot="activator"
+      v-model="fab"
+      :key="activeFab.icon"
+      error>
+      <v-icon>add</v-icon>
+      <v-icon>close</v-icon>
+    </v-btn>
+<!--
+     <v-btn :class="[activeFab.class]"
      fab
-     dark
-     absolute
+     fixed
      bottom
      right
      slot="activator"
-     warning>
-     <v-icon>add</v-icon></v-btn>
-
+     v-model="fab"
+     :key="activeFab.icon"
+     secondary >
+     <v-icon>add</v-icon>
+   </v-btn>
+ -->
      <v-card>
       <v-container grid-list-md>
         <br>
-        <v-chip label outline class="green green--text right">{{ status }} </v-chip>
+        <v-chip label outline class="success success--text right">{{ status }} </v-chip>
         <h3 class="headline">Report a New Issue</h3>
         <br>
         <v-layout wrap>
@@ -109,9 +125,9 @@
       <br>
       <br>
       <span>
-        <v-btn outline @click.native="dialog = false">Cancel</v-btn>
+        <v-btn outline primary @click.native="dialog = false">Cancel</v-btn>
       </span>
-      <v-btn warning class="right" @click.native="dialog = false">Submit Your Issue</v-btn>
+      <v-btn primary class="right" @click.native="dialog = false">Submit Your Issue</v-btn>
       <v-card-actions>
         <v-spacer></v-spacer>
       </v-card-actions>
@@ -124,19 +140,31 @@
 
 
 <script>
-  export default {
-    name: 'IssueForm',
-    data () {
-      return {
-        dialog: false,
-        checkbox: false,
-        checked: true,
-        cltc: '',
-        menu: '',
-        when: '',
-        status: 'OPEN',
-        checkboxErrors: ''
+export default {
+  name: 'IssueForm',
+  data () {
+    return {
+      dialog: false,
+      checkbox: false,
+      checked: true,
+      fab: false,
+      hidden: false,
+      cltc: '',
+      menu: '',
+      when: '',
+      status: 'OPEN',
+      checkboxErrors: ''
+    }
+  },
+  computed: {
+    activeFab () {
+      switch (this.tabs) {
+        case 'one': return { 'class': 'red', icon: 'add' }
+        case 'two': return { 'class': 'yellow', icon: 'edit' }
+        case 'three': return { 'class': 'green', icon: 'keyboard_arrow_up' }
+        default: return {}
       }
     }
   }
+}
 </script>

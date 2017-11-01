@@ -1,13 +1,14 @@
 <template>
   <v-navigation-drawer
+  light 
   persistent
   overflow
+  clipped
   v-model="visibility"
-  light
   @input="trackChange"
   >
 
-  <v-toolbar fixed dense dark class="primary black--text">
+  <v-toolbar fixed dense >
     <v-toolbar-title class="">Filters</v-toolbar-title>
   </v-toolbar>
 
@@ -202,8 +203,3 @@
     }
   }
 </script>
-<style>
-.application--light .input-group--selection-controls {
-  color: orange  ;
-}
-</style>
